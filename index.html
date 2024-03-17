@@ -18,7 +18,18 @@
 </head>
 
 <body>
-    <!-- banner -->
+  <nav>
+    <div class="container">
+      <a id="sec-1" href="#banner">
+        <img style="height: 60px" src="img/logo.png" alt="logo">
+      </a>
+      <ul>
+        <li><a id="sec-2" href="#feature">О нас</a></li>
+        <li><a id="sec-3" href="#schedule">Расписание</a></li>
+      </ul>
+    </div>
+  </nav>
+  <!-- banner -->
     <div class="jumbotron jumbotron-fluid d-flex flex-column" id="banner">
         <img src="img/landing-top.png"/>
         <div id="banner-background" class="container text-center text-md-left" style="background-image: url(img/landing-bottom.png);">
@@ -30,15 +41,15 @@
                       </div>
                   </div>
               </header> -->
-              <h1 data-aos="fade" data-aos-easing="linear" data-aos-duration="1000" data-aos-once="true" class="display-3 text-white font-weight-bold my-5">
-                Уютная<br>
-                художественная<br>
+              <h1 data-aos="fade" data-aos-easing="linear" data-aos-duration="1000" data-aos-once="true" class="display-3 font-weight-bold my-5">
+                Уютная<br/>
+                художественная<br/>
                 студия в Барселоне
               </h1>
-              <h3 data-aos="fade" data-aos-easing="linear" data-aos-duration="1000" data-aos-once="true" class="lead text-white my-4">
-                -Научитесь рисовать с нуля<br>
-                -Отдохнете от рутины с вином и искусством<br>
-                -Найдете компанию единомышленников<br>
+              <h3 data-aos="fade" data-aos-easing="linear" data-aos-duration="1000" data-aos-once="true" class="lead my-4">
+                -Научитесь рисовать с нуля<br/>
+                -Отдохнете от рутины с вином и искусством<br/>
+                -Найдете компанию единомышленников<br/>
               </h3>
               <a href="#" data-aos="fade" data-aos-easing="linear" data-aos-duration="1000" data-aos-once="true" class="btn my-4 font-weight-bold atlas-cta cta-orange">Sign Up</a>
           </div>
@@ -66,21 +77,22 @@
         </div>
     </div> -->
     <!-- feature -->
-    <div class="jumbotron jumbotron-fluid feature" id="feature-last">
+    <div class="jumbotron jumbotron-fluid feature" id="feature">
         <div class="container">
             <div class="row justify-content-between text-center text-md-left">
-                <div data-aos="fade-left" data-aos-duration="1000" data-aos-once="true" class="col-md-6 flex-md-last align-self-center">
+                <div id="feature-list" data-aos="fade-left" data-aos-duration="1000" data-aos-once="true" class="col-md-6 flex-md-last align-self-center">
                     <h2 class="font-weight-bold text-center">
-                      Ведущая мастер классов<br>
+                      Ведущая мастер классов<br/>
                       Мария Калатозишвили
                     </h2>
-                    <h3 style="margin: 50px 0">
-                      - Преподает рисование с 2018 года<br>
-                      - Основатель студии анимации и комиксов “Weird Sisters”<br>
-                      - Окончила факультет искусств Оукландского Колледжа в Англии<br>
-                      - Работала художником в СоюзМультфильм <br>
-                      - Продала 100% картин, написанных на продажу <br>
+                    <div style="margin: 50px 0">
+                      <h3>- Преподает рисование с 2018 года</h3>
+                      <h3>- Основатель студии анимации и комиксов “Weird Sisters”</h3>
+                      <h3>- Окончила факультет искусств Оукландского Колледжа в Англии</h3>
+                      <h3>- Работала художником в СоюзМультфильм </h3>
+                        <h3>- Продала 100% картин, написанных на продажу </h3>
                     </h3>
+                    </div>
                 </div>
                 <div data-aos="fade-right" data-aos-duration="1000" data-aos-once="true" class="col-md-6 align-self-center flex-md-first">
                     <img src="img/photo_for_bio.png"  class="mx-auto d-block">
@@ -90,7 +102,7 @@
     </div>
 
     <!-- schedule table -->
-    <div class="container my-5 py-2" id="price-table">
+    <div class="container my-5 py-2" id="schedule">
         <h2 class="text-center font-weight-bold d-block mb-3">Schedule an appointment</h2>
         <iframe src="https://app.acuityscheduling.com/schedule.php?owner=31617791" title="Schedule Appointment" width="100%" height="800" frameBorder="0"></iframe><script src="https://embed.acuityscheduling.com/js/embed.js" type="text/javascript"></script>
     </div>
@@ -102,7 +114,7 @@
                     <h2 class="font-weight-bold">Contact Us</h2>
                     <p class="my-4">
                         Te iisque labitur eos, nec sale argumentum scribentur,
-                        <br> augue disputando in vim. Erat fugit sit at, ius lorem.
+                        <br/> augue disputando in vim. Erat fugit sit at, ius lorem.
                     </p>
                     <ul class="list-unstyled">
                         <li>Email : company_email@com</li>

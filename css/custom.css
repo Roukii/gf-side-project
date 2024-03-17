@@ -2,9 +2,51 @@
 :root {
   --main-color: #fff0cc;
   --main-color-darker: #fee6ac;
+  --main-font: #3d1019;
+  --main-font-lighter: white;
 }
 body {
   background-color: var(--main-color) !important;
+  padding-top: 20px;
+}
+
+nav {
+  top: 0%;
+  width: 100%;
+  position: fixed;
+  background-color: var(--main-color-darker);
+  z-index: 1;
+}
+nav .container {
+  margin: 0 auto;
+  text-align: start;
+  display: flex;
+  flex-direction: row;
+}
+
+nav .container ul {
+  padding: 12px;
+  margin: 0;
+}
+nav .container ul li {
+  list-style: none;
+  display: inline-block;
+
+}
+nav .container ul li a:hover {
+  padding: 12px;
+  text-decoration: underline;
+}
+nav .container ul li a {
+  margin: 8px;
+  padding: 10px;
+  color: var(--main-font);
+  font-size: 1.2em;
+  text-decoration: none;
+  transition: all 0.3s ease-out;
+}
+nav .active {
+  border-bottom: 2px solid #d0d7d9;
 }
 
 h2 {
@@ -74,8 +116,14 @@ button {
 #banner {
   background-color: var(--main-color);  
   margin: 20px 0 !important;
+  padding: 20px 50px;
 }
 
+@media (min-width: 1200px) {
+  #banner {
+    padding: 20px 150px;
+  }
+}
 /********** banner **********/
 #banner-background {
   background-size: cover;
@@ -98,6 +146,13 @@ button {
 #banner h1 {
   text-align: center;
 }
+
+@media (min-width: 1200px) {
+  #banner .container{
+    padding: 20px 100px;
+    color: var(--main-font)
+  }
+}
 /********** feature (skew background) **********/
 .feature img {
     width: 100%;
@@ -108,22 +163,33 @@ button {
     background: var(--main-color);
 }
 
-#feature-last {
+#feature {
   background: var(--main-color);
 }
 
-/********** price table **********/
-#price-table {
+#feature h3 br{
+  display: block;
+    margin: 5px 0;
+}
+
+#feature-list {
+  border: 10px;
+  border-radius: 5%;
+  background: white;
+  padding: 45px;
+}
+/********** schedule **********/
+#schedule {
     padding-top: 4rem !important;
     padding-bottom: 4rem !important;
 }
 
-#price-table__premium {
+#schedule__premium {
     background: #192440;
     color: #ffffff;
 }
 
-#price-table ul li {
+#schedule ul li {
     padding: 5px 0;
 }
 
