@@ -1,4 +1,12 @@
 /********** common setting **********/
+:root {
+  --main-color: #fff0cc;
+  --main-color-darker: #fee6ac;
+}
+body {
+  background-color: var(--main-color) !important;
+}
+
 h2 {
     font-size: 2.8rem !important;
     font-weight: 700;
@@ -34,14 +42,13 @@ button {
     width: 100%;
 }
 
-.cta-green {
-    background: #00FFAD;
-    color: #192440;
+.cta-orange {
+    background: var(--main-color-darker);
+    color: #ffffff;
 }
 
-.cta-green:hover {
-    color: #ffffff;
-    background: #00e69c;
+.cta-orange:hover {
+  background: var(--main-color-darker);
 }
 
 .cta-blue {
@@ -65,7 +72,14 @@ button {
 }
 
 #banner {
-    background-size: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 100% auto !important;
+  width: 100%;
+  height: 100%;
+  margin: 20px 0 !important;
+  background-color: var(--main-color);
 }
 
 /********** banner **********/
@@ -77,6 +91,9 @@ button {
     max-width: 80px;
 }
 
+#banner h1 {
+  text-align: center;
+}
 /********** feature (skew background) **********/
 .feature img {
     width: 100%;
@@ -84,11 +101,11 @@ button {
 }
 
 #feature-first {
-    background: linear-gradient(168deg, #ffffff 55%, #00FFAD 0);
+    background: var(--main-color);
 }
 
 #feature-last {
-    background: #00FFAD;
+  background: var(--main-color);
 }
 
 /********** price table **********/
