@@ -91,6 +91,7 @@ button {
 
 .cta-orange:hover {
   background: var(--main-color-darker);
+  color: var(--main-font)
 }
 
 .cta-blue {
@@ -129,7 +130,7 @@ button {
     flex-direction: column-reverse !important;
   }
 }
-@media (max-width: 1200px) {
+@media (max-width: 1000px) {
   #feature-div {
     display: flex;
     flex-direction: column;
