@@ -1,281 +1,229 @@
 /********** common setting **********/
 :root {
-  --main-color: #fff0cc;
-  --main-color-darker: #fee6ac;
-  --main-font: #3d1019;
-  --main-font-lighter: white;
+  --main-color: #FFFEDE;
+  --main-color-darker: #F7D488;
+  --main-color-darkest: #FFAD05;
+  --main-font: #141414;
+  --main-font-darker: #000000;
 }
+
+html {
+  font-size: 16px;
+  /* @media screen and (max-width: 991px) {
+    font-size: 62.5%;
+  }
+  @media screen and (max-width: 767px) {
+    font-size: 50%;
+  }
+  @media screen and (max-width: 600px) {
+    font-size: 45%;
+  } */
+}
+
+@font-face {
+  font-family: Denistina;
+  src: url(font/denistina_en.ttf);
+}
+
+@font-face {
+  font-family: JOURNALISM;
+  src: url(font/journalism.ttf);
+}
+
+@font-face {
+  font-family: GilroyBold;
+  src: url(font/Gilroy-ExtraBold.otf);
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: Gilroy;
+  src: url(font/Gilroy-Light.otf);
+}
+
 body {
   background-color: var(--main-color) !important;
-  padding-top: 20px;
-}
-
-nav {
-  top: 0%;
-  width: 100%;
-  position: fixed;
-  background-color: var(--main-color-darker);
-  z-index: 1;
-}
-nav .container {
-  margin: 0 auto;
-  text-align: start;
-  display: flex;
-  flex-direction: row;
-}
-
-nav .container ul {
-  padding: 12px;
+  padding-top: 1.25rem;
   margin: 0;
 }
-nav .container ul li {
-  list-style: none;
-  display: inline-block;
 
-}
-nav .container ul li a:hover {
-  padding: 12px;
-  text-decoration: underline;
-}
-nav .container ul li a {
-  margin: 8px;
-  padding: 10px;
-  color: var(--main-font);
-  font-size: 1.2em;
-  text-decoration: none;
-  transition: all 0.3s ease-out;
-}
-nav .active {
-  border-bottom: 2px solid #d0d7d9;
+h1 {
+  font-family: JOURNALISM;
+  font-size: 4.688rem;
+  font-weight: 400;
+  line-height: 5.313rem;
+  margin: 0;
 }
 
 h2 {
-    font-size: 2.8rem !important;
-    font-weight: 700;
+  font-family: JOURNALISM;
+  font-size: 2.563rem;
+  font-weight: 400;
+  line-height: 2.625rem;
 }
 
-img {
-    display: block;
-    max-width: 100%;
+h3 {
+  font-family: Gilroy;
+  font-size: 1.25rem;
+  font-weight: 500;
+  line-height: 1.324rem;
+  letter-spacing: 0.19em;
 }
 
-a,
-button {
-    cursor: pointer;
-}
-
-.jumbotron {
-    margin-bottom: 0 !important;
-}
-
-.atlas-cta {
-    border-radius: 22px !important;
-    padding: 12px 30px !important;
-    font-weight: 700;
-    transition: .3s ease-in-out !important;
-}
-
-.atlas-cta:hover {
-    text-decoration: none;
-    transform: translateY(-5px);
-}
-
-.atlas-cta-wide {
-    width: 100%;
-}
-
-.cta-orange {
-    background: var(--main-color-darker);
-    color: #ffffff;
-}
-
-.cta-orange:hover {
-  background: var(--main-color-darker);
-  color: var(--main-font)
-}
-
-.cta-blue {
-    background: #192440;
-    color: #ffffff;
-}
-
-.cta-blue:hover {
-    color: #ffffff;
-    background: #121a2e;
-}
-
-.cta-ghost {
-    border: 2px solid #192440 !important;
-    color: #192440;
-}
-
-.cta-ghost:hover {
-    color: #ffffff;
-    background: #121a2e;
-}
-
-#banner {
-  background-color: var(--main-color);  
-  margin: 20px 0 !important;
-  padding: 20px 50px;
+p {
+  font-family: Gilroy;
+  font-size: 1.125rem;
+  font-weight: 300;
+  line-height: 1.297rem;
 }
 
 
-@media (max-width: 800px) {
-  #banner {
-    padding: 20px 20px;
-  }
-  #feature-div {
-    display: flex;
-    flex-direction: column-reverse !important;
-  }
+.icon {
+  font-family: Denistina;
+  font-size: 1.814rem;
+  font-weight: 400;
+  line-height: 2rem;
 }
-@media (max-width: 1000px) {
-  #feature-div {
-    display: flex;
-    flex-direction: column;
-  }
+
+.container {
+  display: flex;
+  flex-direction: row;
+  padding: 0 6.25rem;
 }
-@media (min-width: 1200px) {
-  #banner {
-    padding: 20px 150px;
-  }
+
+.container-reverse {
+  display: flex;
+  flex-direction: row;
+  padding: 0 6.25rem;
 }
-/********** banner **********/
-#banner-background {
-  background-size: cover;
+
+.wave-background {
+  background-image: url("../img/wave-section.svg");
   background-repeat: no-repeat;
-  background-position: center center;
-  background-size: 100% 100% !important;
+  background-size: contain;
+  background-position: left;
+}
+
+.section-text {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  flex-grow: 3;
+  justify-content: center;
+}
+
+.section-image {
+  flex-grow: 2;
+  padding: 3.125rem 3.125rem;
+}
+
+.section-image img{
+  width: 45vw;
+  margin: 0 auto;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+}
+
+.list .list-element {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.list .list-icon {
+  background-image: url("../img/bubble-big.png");
+  background-repeat: no-repeat;
+  width: 60px;
+  height: 60px;
+  padding-right: 1.25rem;
+  display: flex;
+}
+
+.list .list-bubble {
+  background-image: url("../img/bubble.png");
+  background-repeat: no-repeat;
+  width: 40px;
+  height: 40px;
+  padding-right: 1.25rem;
+  display: flex;
+}
+
+.list .list-icon img{
+  width: 18px;
+  height: 18px;
+  margin: auto;
+}
+
+.list .list-element p {
+  font-family: Gilroy;
+  font-size: 1.125rem;
+  font-weight: 300;
+  line-height: 1.297rem;
+}
+
+.button-icon {
+  border: none;
+  margin: 2.5rem 0;
+  background-color: var(--main-color);
+  background-repeat: no-repeat;
+  background-image: url("../img/button.svg");
+  display: flex;
+  flex-direction: row;
+  width: 25rem;
+  height: 5.625rem;
+  vertical-align: middle;
+  align-items: center;
+}
+
+.button-icon .icon {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  flex-grow: 3;
+}
+
+.button-icon .icon img{
+  width: 21px;
+  height: 21px;
+  margin: auto;
+}
+.button-icon p {
+  flex-grow: 4;
+}
+
+
+.wave {
+  position: relative; 
+  box-sizing:border-box;
   width: 100%;
-  height: 100%;
-  background-color: var(--main-color);  
+  height: 0
 }
 
-#banner header {
-    overflow: hidden;
+.wave-top {
+  position:absolute;
+  margin:0;
+  padding:0; 
+  width: 100%;
+  top: -2px
 }
 
-#banner header img {
-    max-width: 80px;
+.wave-bottom {
+  position:absolute;
+  margin:0;
+  padding:0; 
+  width: 100%;
+  bottom: 8px
 }
 
-#banner h1 {
+.section-card {
+  background-color: var(--main-color-darker);
+  margin-top: -10px;
+  padding: 5rem 3.125rem;
+}
+
+.section-card h1 {
   text-align: center;
-}
-
-@media (min-width: 1200px) {
-  #banner .container{
-    padding: 20px 100px;
-    color: var(--main-font)
-  }
-}
-/********** feature (skew background) **********/
-.feature img {
-    width: 100%;
-    max-width: 480px;
-}
-
-#feature-first {
-    background: var(--main-color);
-}
-
-#feature {
-  background: var(--main-color);
-}
-
-#feature h3 br{
-  display: block;
-    margin: 5px 0;
-}
-
-#feature-list {
-  border: 10px;
-  border-radius: 5%;
-  background: white;
-  padding: 45px;
-}
-/********** schedule **********/
-#schedule {
-    padding-top: 4rem !important;
-    padding-bottom: 4rem !important;
-}
-
-#schedule__premium {
-    background: #192440;
-    color: #ffffff;
-}
-
-#schedule ul li {
-    padding: 5px 0;
-}
-
-/********** contact **********/
-#contact {
-    background-size: cover;
-}
-
-#contact ul li {
-    padding: 3px 0;
-}
-
-#contact form {
-    color: #00FFAD;
-}
-
-#contact form input,
-#contact form textarea {
-    background: transparent;
-    border: 1px solid #00FFAD;
-    color: #ffffff;
-}
-
-/********** copyright **********/
-#copyright {
-    background: var(--main-color-darker);
-    padding: 2rem 3rem;
-}
-
-#copyright #social-media a {
-    width: 40px;
-    height: 40px;
-    border-radius: 99%;
-    background: #ffffff;
-    transition: .4s ease;
-}
-
-#copyright #social-media a i {
-    color: #192440;
-    font-size: 1.2rem;
-    line-height: 40px;
-}
-
-#copyright #social-media a:hover {
-    background: #00FFAD;
-}
-
-#copyright #social-media a:hover i {
-    color: #ffffff;
-}
-
-/********** RWD **********/
-@media (max-width: 575px) {
-    #banner h1 {
-        font-size: 1.6rem;
-    }
-    #banner h3 {
-      font-size: 1rem;
-    }
-    #
-    #feature-list {
-      margin: 10px 20px;
-    }
-}
-@media (max-width: 800px) {
-  #banner h1 {
-      font-size: 2rem;
-  }
-  #banner h3 {
-    font-size: 1.2rem;
-}
 }
