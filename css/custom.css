@@ -9,7 +9,11 @@
 
 html {
   font-size: 16px;
-  /* @media screen and (max-width: 991px) {
+
+  @media screen and (max-width: 1200px) {
+    font-size: 75%;
+  }
+  @media screen and (max-width: 991px) {
     font-size: 62.5%;
   }
   @media screen and (max-width: 767px) {
@@ -17,7 +21,7 @@ html {
   }
   @media screen and (max-width: 600px) {
     font-size: 45%;
-  } */
+  }
 }
 
 @font-face {
@@ -89,12 +93,18 @@ p {
   display: flex;
   flex-direction: row;
   padding: 0 6.25rem;
+  @media screen and (max-width: 767px) {
+    flex-direction: column;
+  }
 }
 
 .container-reverse {
   display: flex;
   flex-direction: row;
   padding: 0 6.25rem;
+  @media screen and (max-width: 767px) {
+    flex-direction: column-reverse;
+  }
 }
 
 .wave-background {
@@ -110,11 +120,18 @@ p {
   text-align: left;
   flex-grow: 3;
   justify-content: center;
+  @media screen and (max-width: 767px) {
+    text-align: center;
+    align-items: center;
+  }
 }
 
 .section-image {
   flex-grow: 2;
   padding: 3.125rem 3.125rem;
+  @media screen and (max-width: 767px) {
+    margin: auto;
+  }
 }
 
 .section-image img{
@@ -164,20 +181,45 @@ p {
   line-height: 1.297rem;
 }
 
-.button-icon {
-  border: none;
-  margin: 2.5rem 0;
-  background-color: var(--main-color);
-  background-repeat: no-repeat;
-  background-image: url("../img/button.svg");
-  display: flex;
-  flex-direction: row;
+
+.button {
+  background-color: var(--main-color-darkest);;
+  border: 2px solid #422800;
+  border-radius: 30px;
+  box-shadow: #422800 4px 4px 0 0;
+  color: #422800;
+  cursor: pointer;
+  padding: 1rem 1.125rem;
+  text-align: center;
+  text-decoration: none;
+  touch-action: manipulation;
+}
+
+.button:hover {
+  background-color: #fff;
+}
+
+.button:active {
+  box-shadow: #422800 2px 2px 0 0;
+  transform: translate(2px, 2px);
+}
+
+.button-big {
   width: 25rem;
   height: 5.625rem;
+  margin: 2.5rem 0 !important;
+  @media screen and (max-width: 767px) {
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+}
+
+.button-icon {
+  display: flex;
+  flex-direction: row;
   vertical-align: middle;
   align-items: center;
 }
-
 .button-icon .icon {
   width: 40px;
   height: 40px;
@@ -224,6 +266,12 @@ p {
   padding: 5rem 3.125rem;
 }
 
+.section-footer {
+  background-color: var(--main-color-darker);
+  margin-top: -10px;
+  padding: 5rem 1.125rem;
+}
+
 .section-card h1 {
   text-align: center;
 }
@@ -238,6 +286,11 @@ p {
   margin: 0 1.125rem;
   align-items: center;
   text-align: center;
+  @media screen and (max-width: 767px) {
+    margin: 1rem 0;
+    width: fit-content;
+    padding: 3.125rem 4.125rem;
+  }
 }
 
 .card h2, p, img, .button-icon {
@@ -252,96 +305,50 @@ p {
   height: 15rem;
 }
 
-/* CSS */
-.button-56 {
-  align-items: center;
-  background-color: var(--main-color-darkest);
-  border: 2px solid #111;
-  border-radius: 8px;
-  box-sizing: border-box;
-  color: #111;
-  cursor: pointer;
-  display: flex;
-  font-family: Inter,sans-serif;
-  font-size: 16px;
-  height: 48px;
-  justify-content: center;
-  line-height: 24px;
-  max-width: 100%;
-  padding: 0 25px;
-  position: relative;
+.text-price {
+  font-family: GilroyBold;
+  font-size: 2.188rem;
+  font-weight: 700;
+  line-height: 2.625rem;
   text-align: center;
-  text-decoration: none;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
+
 }
 
-.button-56:after {
-  background-color: #111;
-  border-radius: 8px;
-  content: "";
-  display: block;
-  height: 48px;
-  left: 0;
-  width: 100%;
-  position: absolute;
-  top: -2px;
-  transform: translate(8px, 8px);
-  transition: transform .2s ease-out;
-  z-index: -1;
+.text-hook {
+  font-family: Gilroy;
+  font-size: 1.875rem;
+  font-weight: 500;
+  line-height: 2.188rem;
+  text-align: left;
+
 }
 
-.button-56:hover:after {
-  transform: translate(0, 0);
+.section-footer .container {
+  gap: 4rem;
 }
 
-.button-56:active {
-  background-color: #ffdeda;
-  outline: 0;
+.section-footer .card {
+  height: 20rem;
+  width: 80%;
+  padding: 3.125rem 2.125rem;
+  align-items: baseline;
 }
 
-.button-56:hover {
-  outline: 0;
+.section-footer .list-element {
+  gap: 1rem;
 }
 
-@media (min-width: 768px) {
-  .button-56 {
-    padding: 0 40px;
+
+.pc-only {
+  @media screen and (max-width: 767px) {
+    display: none;
   }
 }
-/* CSS */
-.button-74 {
-  background-color: var(--main-color-darkest);;
-  border: 2px solid #422800;
-  border-radius: 30px;
-  box-shadow: #422800 4px 4px 0 0;
-  color: #422800;
-  cursor: pointer;
-  display: inline-block;
-  font-weight: 600;
-  font-size: 18px;
-  padding: 0 18px;
-  line-height: 50px;
-  text-align: center;
-  text-decoration: none;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-}
 
-.button-74:hover {
-  background-color: #fff;
-}
-
-.button-74:active {
-  box-shadow: #422800 2px 2px 0 0;
-  transform: translate(2px, 2px);
-}
-
-@media (min-width: 768px) {
-  .button-74 {
-    min-width: 120px;
-    padding: 0 25px;
+.mobile-only {
+  visibility: hidden;
+  @media screen and (max-width: 767px) {
+    visibility: visible;
+    margin: auto;
   }
 }
