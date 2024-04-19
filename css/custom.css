@@ -45,11 +45,6 @@ body {
   width: 100vw;
 }
 
-body {
-  @media (max-width: 767px) {
-    background-color: red !important;
-  }
-}
 h1 {
   font-family: JOURNALISM;
   font-size: 4.688rem;
@@ -568,4 +563,10 @@ html {
   h1, h2, h3, p {
     padding: 0.5rem 0;
   }
+
+
+  body {
+    background-color: red !important;
+  }
+
 }
